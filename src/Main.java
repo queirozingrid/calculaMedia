@@ -3,22 +3,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int opcao;
 
-        System.out.println("Já tem cadastro?");
-        System.out.println("[1] Para 'sim, já tenho'");
-        System.out.println("[2] Para 'não, não tenho'");
-        System.out.println("[3] Cancelar");
+        System.out.println("Digite seu nome");
+        String nome = scan.nextLine();
 
-        opcao = scan.nextInt();
+        System.out.println("Digite sua N1: ");
+        double n1 = scan.nextDouble();
 
-        if(opcao==1){
-            Menu menu = new Menu();
-            menu.escolher();
-        }
-        if(opcao==2){
-            CadastroUser cadastro = new CadastroUser();
-            cadastro.cadastrar();
-        }
+        System.out.println("Digite sua N2: ");
+        double n2 = scan.nextDouble();
+
+        Menu menu = new Menu();
+        menu.escolher(nome, n1, n2);
     }
+
+
 }
