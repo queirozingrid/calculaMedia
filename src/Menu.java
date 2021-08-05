@@ -11,24 +11,20 @@ public class Menu {
         System.out.println("[3] Sair");
         opcao = scan.nextInt();
         Operacao op = new Operacao();
+        double media = op.calculaMedia(n1, n2);
 
         if(opcao==1){
-
             System.out.println("******* DADOS *******");
             System.out.println("Nome: " + nome);
-            if(op.calculaMedia(n1,n2)){
-                System.out.println("Situação: Aprovado");
-            }
-            else{
-                System.out.println("Situação: Reprovado");
-            }
-
+            System.out.println("Média: " + media);
+            op.retornaSituacao(media);
         }
 
         else if(opcao==2){
-           op.calculaMedia(n1, n2);
-
-
+            System.out.println("Média: " + media);
+        }
+        else if(opcao==3){
+            System.exit(0);
         }
 
     }
