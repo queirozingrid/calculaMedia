@@ -13,17 +13,7 @@ public class Main {
             validaNome = op.validaNome(nome);
         } while (!validaNome);
 
-
-
-        System.out.println("Digite sua N1: ");
-        double n1 = scan.nextDouble();
-
-        System.out.println("Digite sua N2: ");
-        double n2 = scan.nextDouble();
-
-        Menu menu = new Menu();
-        menu.escolher(nome, n1, n2);
+        op.validaNota(nome);
     }
-
 
 }

@@ -10,6 +10,7 @@ public class Menu {
         System.out.println("[2] Calcular média");
         System.out.println("[3] Sair");
         opcao = scan.nextInt();
+
         Operacao op = new Operacao();
         double media = op.calculaMedia(n1, n2);
 
@@ -25,6 +26,11 @@ public class Menu {
         }
         else if(opcao==3){
             System.exit(0);
+        }
+        else {
+            System.out.println("Opção inválida! Tente novamente!!!");
+            Menu menu = new Menu();
+            menu.escolher(nome, n1, n2);
         }
 
     }
