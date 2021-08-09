@@ -20,11 +20,12 @@ public class Operacao {
     public boolean validaNome(String nome) {
         int i;
         int contNum = 0;
+
         if(nome.isEmpty() || nome.isBlank()){
             return false;
         }
         for (i = 0; i < nome.length(); i++) {
-            if(Character.isDigit(nome.charAt(i))) {
+            if(Character.isDigit(nome.charAt(i)) || !Character.isAlphabetic(nome.charAt(i))) {
                 contNum++;
             }
         }
